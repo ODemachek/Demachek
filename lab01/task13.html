@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+		div {font-family:monospace;}
+		</style>
+	</head>
+	<body>
+	<input id="inA" oninput="work ()"></input>
+	<div id="out">ура, заработало</div>
+	
+	
+	<script>
+	function work (){
+	var in_a=document.getElementById("inA");
+		
+	var element;
+	element=document.getElementById("out");
+	
+	element.style.color=in_a.value;
+	}
+	
+
+	</script>
+	</body>
+</html>

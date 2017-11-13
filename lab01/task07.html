@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+		div {font-family:monospace;}
+		</style>
+	</head>
+	<body>
+	<input id="inA" oninput="work ()"></input>
+	<div id="out"></div>
+	
+	
+	<script>
+	function work (){
+	var in_a=document.getElementById("inA");
+	var a=parseFloat(in_a.value);//преобразование из числа в текст
+	
+	var element;
+	element=document.getElementById("out");
+	element.innerHTML=a.toFixed(4);
+	}
+	
+
+	</script>
+	</body>
+</html>
