@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+		<input id='inH'oninput="work ()"></input>
+		<div id='out'></div>
+		
+		<script>
+		function work (){
+		var in_h=document.getElementById("inH");
+		var out=document.getElementById("out");
+				
+		var in_h = parseFloat (in_h.value);
+			
+		if (in_h < 0){
+		out.innerHTML = "Высота над уровнем Земли должна быть неотрицательна";
+		return;
+		}
+		var c = in_h + 6350;
+		var a = c*c - 6350*6350;
+			
+		var result = Math.sqrt (a);
+		out.innerHTML= result.toFixed (4);
+				}
+				
+		</script>
+</body>
+</html>
