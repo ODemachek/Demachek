@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+		<input id='inX'oninput="work ()"></input>
+		<div id='out'></div>
+		
+		<script>
+		function work (){
+		var in_x=document.getElementById("inX");
+		var out=document.getElementById("out");
+				
+		var x = parseFloat (in_x.value);
+		var a = 61 - x;
+		
+		if (a < 0){
+		out.innerHTML = "Подкоренное выражение должно быть неотрицательным";
+		return;
+		}
+				
+		var result = 3 * Math.sqrt (a);
+		out.innerHTML= result.toFixed (4);
+				}
+				
+		</script>
+</body>
+</html>

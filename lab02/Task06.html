@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+<meta charset="utf-8"/>
+</head>
+<body>
+		<input id='inbase'oninput="work ()"></input>
+		<input id='inheidt'oninput="work ()"></input>
+		<div id='out'></div>
+		
+		<script>
+		function work (){
+		var in_base=document.getElementById("inbase");
+		var in_heidt=document.getElementById("inheidt");
+		var out=document.getElementById("out");
+		
+		var x = parseFloat (in_base.value);
+		if (x <= 0){
+		out.innerHTML = "Значение base должно быть положительным";
+		return;
+		}
+		var y = parseFloat (in_heidt.value);
+		if (y <= 0){
+		out.innerHTML = "Значение heidt должно быть положительным";
+		return;
+		}
+		
+		var result = x * y /2;
+		out.innerHTML=result.toFixed (2);
+				}
+		</script>
+</body>
+</html>
