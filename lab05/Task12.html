@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inX" oninput = "work ()"> </input>
+	
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_x = document.getElementById ("inX");
+				var x = in_x.value;
+				var result = "";
+				
+				if (x == "a"){
+					result = result + "a + </br>";
+				} else {
+					result = result + "a </br>";
+				}
+				if (x == "b"){
+					result = result + "b + </br>";
+				} else {
+					result = result + "b </br>";
+				}
+				if (x == "c"){
+					result = result + "c + </br>";
+				} else {
+					result = result + "c </br>";
+				}
+				if (x == "d"){
+					result = result + "d + </br>";
+				} else {
+					result = result + "d </br>";
+				}
+				if (x == "e"){
+					result = result + "e + </br>";
+				} else {
+					result = result + "e </br>";
+				}
+				if (x == "f"){
+					result = result + "f + </br>";
+				} else {
+					result = result + "f </br>";
+				}
+				if (x == "g"){
+					result = result + "g + </br>";
+				} else {
+					result = result + "g </br>";
+				}
+				if (x == "h"){
+					result = result + "h + </br>";
+				} else {
+					result = result + "h </br>";
+				}
+				out.innerHTML = result;
+			}
+		</script>	
+	
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "roadInKm" oninput = "work ()"> </input>
+	<input id = "lengthInF" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_road = document.getElementById ("roadInKm");
+				var road = parseFloat (in_road.value);
+				var in_length = document.getElementById ("lengthInF");
+				var length = parseFloat (in_length.value);
+				if (road < 0){
+					out.innerHTML = "Расстояние между деревнями должно быть неотрицательно";
+					return;
+				}
+				if (length < 0){
+					out.innerHTML = "Длина кабеля должна быть неотрицательна";
+					return;
+				}
+				if (road*1000 > length*0.305){
+					out.innerHTML = "Кабеля не хватит. Длина кабеля меньше расстояния";
+				}		
+				else {
+					out.innerHTML = "Кабеля хватит. Расстояние меньше длины кабеля";
+				}
+			}
+		</script>	
+	
+	</body>
+</html>
