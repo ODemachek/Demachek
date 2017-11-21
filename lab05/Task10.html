@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inX" oninput = "work ()"> </input>
+	<input id = "inY" oninput = "work ()"> </input>
+	<input id = "inZ" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_x = document.getElementById ("inX");
+				var x = parseFloat (in_x.value);
+				var in_y = document.getElementById ("inY");
+				var y = parseFloat (in_y.value);
+				var in_z = document.getElementById ("inZ");
+				var z = parseFloat (in_z.value);
+				var result = "";// введен переменный результат
+				
+				if (x>0){
+					var res_x=x*x;
+					result = result + res_x.toFixed(4) + "; ";
+				} else {
+					result = result + x + "; ";
+				}
+				if (y>0){
+					var res_y=y*y;
+					result = result + res_y.toFixed(4) + "; ";
+				} else {
+					result = result + y + "; ";
+				}
+				if (z>0){
+					var res_z=z*z;
+					result = result + res_z.toFixed(4);
+				} else {
+					result = result + z;
+				}
+					out.innerHTML = result;
+				
+			}
+		</script>	
+	
+	</body>
+</html>

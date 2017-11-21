@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inSc" oninput = "work ()"> </input>
+	<input id = "inSs" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_c = document.getElementById ("inSc");
+				var c = parseFloat (in_c.value);
+				var in_s = document.getElementById ("inSs");
+				var s = parseFloat (in_s.value);
+				var p = Math.PI;
+				var d = c / p;
+				var a = Math.sqrt (s);
+				if (c < 0){
+					out.innerHTML = "Площадь круга должна быть положительной";
+					return;
+				}
+				if (s < 0){
+					out.innerHTML = "Площадь квадрата должна быть положительной";
+					return;
+				}
+				if (d > a){
+					out.innerHTML = "Круг не поместится в квадрате";
+								
+				}else {
+					out.innerHTML = "Круг уместится в квадрате";
+				}
+			}
+		</script>	
+	
+	</body>
+</html>

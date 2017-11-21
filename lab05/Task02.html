@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inP" oninput = "work ()"> </input>
+	<input id = "inQ" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_p = document.getElementById ("inP");
+				var in_q = document.getElementById ("inQ");
+				var p = parseFloat (in_p.value);
+				var q = parseFloat (in_q.value);
+				if (p > q){
+					out.innerHTML = "Максимальное "+ p + ", минимальное "+ q;
+				}else {
+					out.innerHTML = "Максимальное "+ q + ", минимальное "+ p;
+				}
+			
+			}
+		</script>	
+	
+	</body>
+</html>

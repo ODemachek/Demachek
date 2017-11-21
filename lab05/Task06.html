@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "shipInKmH" oninput = "work ()"> </input>
+	<input id = "cometInMS" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_ship = document.getElementById ("shipInKmH");
+				var ship = parseFloat (in_ship.value);
+				var in_comet = document.getElementById ("cometInMS");
+				var comet = parseFloat (in_comet.value);
+				if (ship < 0){
+					out.innerHTML = "Скорость корабля должна быть неотрицательна";
+					return;
+				}
+				if (comet < 0){
+					out.innerHTML = "Скорость кометы должна быть неотрицательна";
+					return;
+				}
+				if (ship*1000/3600 > comet){
+					out.innerHTML = "Корабль догонит комету. Скорость кометы " + comet + " м/с меньше скорости корабля " + ship+" км/ч";
+				}		
+				else {
+					out.innerHTML = "Комета улетит от корабля. Скорость корабля " + ship +" км/ч меньше скорости кометы " + comet + " м/с";
+				}
+			}
+		</script>	
+	
+	</body>
+</html>
