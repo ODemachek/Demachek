@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inK" oninput = "work ()"> </input>
+	
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_k = document.getElementById ("inK");
+				var k = parseFloat (in_k.value);
+				if (k > 0){
+					var result = Math.sqrt (k);
+					out.innerHTML = result.toFixed (3);
+				}else {
+					var result = k * k;
+					out.innerHTML = result.toFixed (3);
+				}
+			
+			}
+		</script>	
+	
+	</body>
+</html>

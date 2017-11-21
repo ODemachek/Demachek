@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inA" oninput = "work ()"> </input>
+	<input id = "inB" oninput = "work ()"> </input>
+	<input id = "inC" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_a = document.getElementById ("inA");
+				var a = parseFloat (in_a.value);
+				var in_b = document.getElementById ("inB");
+				var b = parseFloat (in_b.value);
+				var in_c = document.getElementById ("inC");
+				var c = parseFloat (in_c.value);
+				if (a<b && b <c){
+					out.innerHTML = "Выполняется";
+				} else {
+					out.innerHTML = "Не выполняется";
+				}
+				
+				/*if (a >= b){
+					out.innerHTML = "Не выполняется";
+					return;
+				}
+				if (b >= c){
+					out.innerHTML = "Не выполняется";				
+				}		
+				else {
+					out.innerHTML = "Выполняется";
+				}
+				*/
+			}
+		</script>	
+	
+	</body>
+</html>
