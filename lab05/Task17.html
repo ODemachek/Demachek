@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inM" oninput = "work ()"> </input>
+	<input id = "inP" oninput = "work ()"> </input>
+		<div id = "out"></div>
+		<script>
+			function work (){
+				var in_m = document.getElementById ("inM");
+				var m = parseFloat (in_m.value);
+				var in_p = document.getElementById ("inP");
+				var p = parseFloat (in_p.value);
+				
+				if (p == 0) {
+					out.innerHTML = "Значение P должно быть не равно нулю";
+					return;
+				}
+				var c=m/p;
+				var d = m%p;
+				
+				if (d > 0){
+					out.innerHTML = "M не делится нацело на P";
+				}else {
+					out.innerHTML = c;
+				}	
+									
+			}
+		</script>	
+	
+	</body>
+</html>

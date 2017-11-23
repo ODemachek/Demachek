@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inX" oninput = "work ()"> </input>
+	<input id = "inY" oninput = "work ()"> </input>
+	<input id = "inZ" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_x = document.getElementById ("inX");
+				var x = parseFloat (in_x.value);
+				var in_y = document.getElementById ("inY");
+				var y = parseFloat (in_y.value);
+				var in_z = document.getElementById ("inZ");
+				var z = parseFloat (in_z.value);
+				var result=" ";
+								
+				if (x <= 5 && x >= -3){
+					result = result + x + ", ";
+				}	
+				if (y <= 5 && y >= -3){
+					result = result + y+ ", ";
+				}	
+				if (z <= 5 && z >= -3){
+					result = result + z;
+				}	
+					out.innerHTML = result;
+				
+			}
+		</script>	
+	
+	</body>
+</html>
