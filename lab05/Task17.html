@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -15,15 +15,16 @@
 				var p = parseFloat (in_p.value);
 				
 				if (p == 0) {
-					out.innerHTML = "Значение P должно быть не равно нулю";
+					out.innerHTML = "Р—РЅР°С‡РµРЅРёРµ P РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РЅРµ СЂР°РІРЅРѕ РЅСѓР»СЋ";
 					return;
 				}
-				var c=m/p;
+				
 				var d = m%p;
 				
 				if (d > 0){
-					out.innerHTML = "M не делится нацело на P";
+					out.innerHTML = "M РЅРµ РґРµР»РёС‚СЃСЏ РЅР°С†РµР»Рѕ РЅР° P";
 				}else {
+					var c=m/p;
 					out.innerHTML = c;
 				}	
 									
