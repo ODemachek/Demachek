@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "inA1" oninput = "work ()"> </input>
+	<input id = "inB1" oninput = "work ()"> </input>
+	<input id = "inA2" oninput = "work ()"> </input>
+	<input id = "inB2" oninput = "work ()"> </input>
+	<div id = "out"></div>
+		<script>
+			function work (){
+				var in_a1 = document.getElementById ("inA1");
+				var a1 = parseFloat (in_a1.value);
+				var in_b1 = document.getElementById ("inB1");
+				var b1 = parseFloat (in_b1.value);
+				var in_a2 = document.getElementById ("inA2");
+				var a2 = parseFloat (in_a2.value);
+				var in_b2 = document.getElementById ("inB2");
+				var b2 = parseFloat (in_b2.value);
+				
+				if (a1>b1){
+					out.innerHTML = "Значение A должно быть меньше значения B";
+					return;
+				}
+				if (a2>b2){
+					out.innerHTML = "Значение A должно быть меньше значения B";
+					return;
+				}					
+				if ((b1>a2 && a1>a2)|| (b2>a1 && a2>a1)){
+					out.innerHTML = "не пересекаются";
+				} 
+				if (a2<=a1 && b2<=b1){
+					out.innerHTML = "пересекаются "+ "("a2", "b2")";
+				}
+				if (a2<=a1 && a2<=b1 && b2>b1){
+					out.innerHTML = "пересекаются "+ "("a2", "b1")";
+				}
+				if (a1<=a2 && b1<=b2){
+					out.innerHTML = "пересекаются "+ "("a1", "b1")";
+				}
+				if (a1<=a2 && a1<=b2 && b2<b1){
+					out.innerHTML = "пересекаются "+ "("a1", "b2")";
+				}
+				
+							
+			}
+		</script>	
+	
+	</body>
+</html>

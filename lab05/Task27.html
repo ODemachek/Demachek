@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	
+	<input id = "inX" oninput = "work ()"> </input>
+			<div id = "out"></div>
+		<script>
+		
+		function work (){
+			var in_x=document.getElementById ("inX");
+			var x=parseFloat (in_x.value);
+			
+			if (x > 100 || x < -10) {
+				out.innerHTML="Значение A должно быть в интервале [-10, 100]";
+				return;
+			}
+			if (x ==3 || x==-3 ) {
+				out.innerHTML= x + "-ий";
+				return;
+			}
+			if ( x==0 || x==2 || x==6 || x==7 || x==8 || x==40 || x==-2 || x== -6 || x==-7 || x==-8 || x==-40 ){
+				out.innerHTML = x + "-ой";
+			}else{
+				out.innerHTML = x + "-ый";	
+			}
+			
+		}
+					
+		</script>	
+	
+	</body>
+</html>

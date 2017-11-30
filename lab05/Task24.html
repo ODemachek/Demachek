@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	
+	<canvas id="canv" width="1000" height="1000"></canvas>
+	
+	<input id = "inX" oninput = "work ()"> </input>
+	<input id = "inY" oninput = "work ()"> </input>
+		<div id = "out"></div>
+		<script>
+		
+		var canv=document.getElementById ("canv");
+		var pen= canv.getContext ("2d");
+		
+		pen.fillStyle="#00FF00";
+		
+		var cXpx=500; //центр координат
+		var cYpx=500;
+		pen.moveTo (cXpx, 0);
+		pen.lineTo (cXpx, 1000);
+		pen.stroke ();
+		
+		pen.moveTo (0, cYpx);
+		pen.lineTo (1000, cYpx);
+		pen.stroke ();
+		
+		pen.fillStyle="#00FF00";
+		
+		var x=700;
+		var y=0;
+		var width=300;
+		var height=400;
+		pen.fillRect (x, y, width, height);
+		
+		var x=700;
+		var y=650;
+		var width=300;
+		var height=350;
+		pen.fillRect (x, y, width, height);
+		
+		canv.onclick = function (event){
+			var x = event.offsetX;
+			var y = event.offsetY;
+			if ((x >= 700 && y <= 400)||(x >= 700 && y >= 650)){
+				pen.fillStyle= "red";
+				pen.fillRect (x, y, 20,20);
+			}else{
+				pen.fillStyle= "black";
+				pen.fillRect (x, y, 20,20);
+			}
+			
+		}
+		
+					
+		</script>	
+	
+	</body>
+</html>
