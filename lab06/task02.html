@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		
+	</head>
+	<body>
+	
+	<div id="out"></div>
+	<div id="out2"></div>
+	<div id="out3"></div>
+	
+	<script>
+	
+	var div_out=document.getElementById("out");
+	var result="";
+	
+	result = result + 17 + " ";
+	result = result + 18 + " ";
+	result = result + 19 + " ";
+	result = result + 20 + " ";
+	result = result + 21 + " ";
+	div_out.innerHTML = result;
+
+	</script>
+	<script>
+	var div_out=document.getElementById("out2");
+	var result="";
+	var a = 17;
+	result = result + a + " ";
+	a = a + 1;
+	result = result + a + " ";
+	a = a + 1;
+	result = result + a + " ";
+	a = a + 1;
+	result = result + a + " ";
+	a = a + 1;
+	result = result + a + " ";
+	a = a + 1;
+	div_out.innerHTML = result;	
+	</script>
+	<script>
+	var div_out=document.getElementById("out3");
+	var result="";
+	var a = 17;
+	while (a<=47) {
+		result = result + a + " ";
+		a = a + 1;
+	}
+	div_out.innerHTML = result;
+	</script>
+	</body>
+</html>
