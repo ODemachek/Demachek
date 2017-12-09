@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		
+	</head>
+	<body>
+	
+		<input id="inW" oninput = "work ()"></input>
+		<div id="out" style="font-family: monospace; white-space:"></div>
+			
+	<script>
+	function work () {
+		var in_w=document.getElementById("inW");
+		var w = parseFloat (in_w.value);
+		var y=2;
+		var a = 0;
+		var result="";
+		var div_out=document.getElementById("out");
+		
+		if (w<0) {
+		div_out.innerHTML ="Значение W должно быть неотрицательно";
+		return;
+		}
+		
+		result = result + "+";
+		while (y < w){
+			result = result + "-"; 
+			y = y +1;
+		}
+		result = result + "+ <br>";
+		result = result + "|";
+		y=2;
+		while (y < w){
+			result = result + "."; 
+			y = y +1;
+		}
+		result = result + "| <br>";
+		y=2;
+		result = result + "+";
+		while (y < w){
+			result = result + "-"; 
+			y = y +1;
+		}
+		result = result + "+ <br>";
+		
+		div_out.innerHTML = result;
+		
+	}
+	</script>
+	
+	</body>
+</html>

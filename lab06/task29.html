@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		
+	</head>
+	<body>
+	
+	<input id="inX" oninput = "work ()"></input>
+	<input id="inW" oninput = "work ()"></input>
+	<input id="inH" oninput = "work ()"></input>
+	<div id="out"></div>
+	
+	<script>
+	function work () {
+		var in_x=document.getElementById("inX");
+		var x = in_x.value;
+		var in_w=document.getElementById("inW");
+		var w = parseFloat (in_w.value);
+		var in_h=document.getElementById("inH");
+		var h = parseFloat (in_h.value);
+		var y=0;
+		var a = 0;
+		var result="";
+		var div_out=document.getElementById("out");
+		
+		if (w<0) {
+		div_out.innerHTML ="Значение W должно быть неотрицательно";
+		return;
+		}
+		if (h<0) {
+		div_out.innerHTML ="Значение H должно быть неотрицательно";
+		return;
+		}
+		
+		while (a<h){
+			y = 0;
+			while (y<w){
+				result = result + x; 
+				y = y +1;
+			}
+			result = result + "<br>";
+			a = a + 1;
+		}
+		
+		div_out.innerHTML = result;
+	}
+	</script>
+	
+	</body>
+</html>
