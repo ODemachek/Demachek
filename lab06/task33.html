@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		
+	</head>
+	<body>
+	
+		<input id="inA" oninput = "work ()"></input>
+		<input id="inB" oninput = "work ()"></input>
+		<div id="out" style="font-family: monospace; white-space:pre;"></div>
+			
+	<script>
+	function work () {
+		var in_a=document.getElementById("inA");
+		var a = parseFloat (in_a.value);
+		var in_b=document.getElementById("inB");
+		var b = parseFloat (in_b.value);
+		var y = "";
+		var x = 0;
+		var result = "";
+		var div_out=document.getElementById("out");
+		
+		if (a > b){
+			while (b <= a){
+				c = b%2; 
+				if (c != 0){
+					result = result + y + b + "<br>";
+					y = y + ".";
+				}
+				b = b + 1;
+				
+			}
+		} else {
+			while (a <= b){
+					c = a%2; 
+					if (c != 0){
+						result = result + y + a + "<br>";
+						y = y + ".";
+					}
+					a = a + 1;
+				}
+			}
+		div_out.innerHTML = result;		
+	}	
+		
+		
+	
+	</script>
+	
+	</body>
+</html>
