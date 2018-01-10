@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "in_P" oninput = "work ()"></input>
+	<input id = "in_Q" oninput = "work ()"></input>
+	<input id = "in_arr" oninput = "work ()"></input>
+	<div id = "out"></div>
+	
+	<script>
+	function work (){
+	
+	var in_p = document.getElementById ("in_P");
+	var p = parseFloat (in_p.value);
+	
+	var in_q = document.getElementById ("in_Q");
+	var q = parseFloat (in_q.value);
+	
+	var inArr = document.getElementById ("in_arr");
+	var arr = inArr.value.split (" ");
+	
+	if (p < 0 || p >= arr.length) {
+	document.getElementById ("out").innerHTML = "Число P должно быть в интервале [0, размер массива)";
+	return;
+	}
+	if (q < 0 || q >= arr.length) {
+	document.getElementById ("out").innerHTML = "Число Q должно быть в интервале [0, размер массива)";
+	return;
+	}
+	var result = "";
+	var a = 0;
+	var t = 0;
+	
+	t = arr [q];
+	arr [q] = arr [p];
+	arr [p] = t;
+	
+	while (a < arr.length)	{
+		result = result + arr [a] + " ";
+		a = a + 1;
+	}
+	document.getElementById ("out").innerHTML = result;
+	}
+	</script>
+	
+	
+	</body>
+</html>

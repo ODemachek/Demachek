@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "in_arr" oninput = "work ()"></input>
+	<input id = "in_A" oninput = "work ()"></input>
+	<div id = "out"></div>
+	
+	<script>
+	function work (){
+	
+	var in_a = document.getElementById ("in_A");
+	var a = parseFloat (in_a.value);
+	
+	var inArr = document.getElementById ("in_arr");
+	var arr = inArr.value.split (" ");
+	
+	if (a < 0 || a >= arr.length) {
+	document.getElementById ("out").innerHTML = "Число A должно быть в интервале [0, размер массива)";
+	return;
+	}
+	if (inArr.value == ""){
+	document.getElementById ("out").innerHTML = "Исходная строка пуста";
+	return;
+	}
+	document.getElementById ("out").innerHTML = arr [a];
+	}
+	</script>
+	
+	
+	</body>
+</html>
