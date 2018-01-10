@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+	<input id = "in_arr_t" oninput = "work ()"></input>
+	<input id = "in_arr_l" oninput = "work ()"></input>
+	<div id = "out" style = "font-family: monospace; white-space: pre;"></div>
+	
+	<script>
+	
+	function work (){
+	
+		var inArrT = document.getElementById ("in_arr_t");
+		var arr_t = inArrT.value.split (" ");
+		var inArrL = document.getElementById ("in_arr_l");
+		var arr_l = inArrL.value.split (" ");
+		var result = "";
+		var b = 0;
+		var a = 0;
+		var c = 0;
+		
+		if (arr_t.length == ""){
+		result = result + "Данные сверху отсутствуют";
+		return;
+		}
+		if (arr_l.length == ""){
+		result = result + "Данные слева отсутствуют";
+		return;
+		}
+		while (b < arr_l.length){
+			a = 0;
+			while (a < arr_t.length){
+			
+				if (arr_t [a] == arr_l [b]){
+					c = c + 1;
+				}
+				a = a + 1;
+			}
+			b = b + 1;
+		}
+		result = "Повторений: " + c;
+				
+		document.getElementById ("out").innerHTML = result;
+	}
+	</script>
+	
+	
+	</body>
+</html>
