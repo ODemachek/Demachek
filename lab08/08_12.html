@@ -21,12 +21,14 @@
 		var a = 0;
 		var c = 0;
 		
-		if (arr_t.length == ""){
+		if (inArrT.value == ""){
 		result = result + "Данные сверху отсутствуют";
+		document.getElementById ("out").innerHTML = result;
 		return;
 		}
-		if (arr_l.length == ""){
+		if (inArrL.value == ""){
 		result = result + "Данные слева отсутствуют";
+		document.getElementById ("out").innerHTML = result;
 		return;
 		}
 		while (b < arr_l.length){
